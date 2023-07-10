@@ -1,3 +1,9 @@
+# Kubernetes Components
+When you deploy Kubernetes, you get a cluster.
+
+A Kubernetes cluster consists of a set of worker machines, called nodes, that run containerized applications. Every cluster has at least one worker node.
+In production environments, the control plane usually runs across multiple computers and a cluster usually runs multiple nodes, providing fault-tolerance and high availability.
+
 # Control Plane Components :
 The control plane's components make global decisions about the cluster
     Detecting and responding to cluster events 
