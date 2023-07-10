@@ -28,6 +28,11 @@ The control plane's components make global decisions about the cluster
       The cloud controller manager lets you link your cluster into your cloud provider's API.
       The cloud-controller-manager only runs controllers that are specific to your cloud provider
 
+Reference Diagram:
+
+![image](https://github.com/Bhoopesh123/k8s-concepts/assets/43882719/a6a5a553-78e4-4d67-afaa-4e86fc1d83f3)
+
+
 # Node Components:
 Node components run on every node, maintaining running pods and providing the Kubernetes runtime environment.
 
@@ -44,5 +49,3 @@ Node components run on every node, maintaining running pods and providing the Ku
     Container Run Time in Nutshell:
     https://kubernetes.io/docs/setup/production-environment/container-runtimes/
 
-
-![image](https://github.com/Bhoopesh123/k8s-concepts/assets/43882719/a6a5a553-78e4-4d67-afaa-4e86fc1d83f3)
