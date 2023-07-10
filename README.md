@@ -45,3 +45,4 @@ Node components run on every node, maintaining running pods and providing the Ku
     https://kubernetes.io/docs/setup/production-environment/container-runtimes/
 
     ![Alt text](image.png)
+    ![alt text](https://github.com/Bhoopesh123/k8s-concepts/blob/main/image.png)
