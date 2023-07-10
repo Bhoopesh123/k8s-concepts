@@ -43,3 +43,5 @@ Node components run on every node, maintaining running pods and providing the Ku
 
     Container Run Time in Nutshell:
     https://kubernetes.io/docs/setup/production-environment/container-runtimes/
+
+    ![Alt text](image.png)
