@@ -2,6 +2,7 @@
 
 Below command will deploy nginx deployment  
 
+    cd examples
     kubectl apply -f deployement_explanation.yaml
 
 # Updating a Deployment  
@@ -31,4 +32,5 @@ Below command will deploy nginx deployment
 
 Below command will deploy statefulset deployment  
 
+    cd examples
     kubectl apply -f statefulset_explanation.yaml
