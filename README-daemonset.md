@@ -10,17 +10,17 @@ Below command will deploy fluent-d daemonset
 
 There are 3 effects:
 
-    1.NoSchedule: Kubernetes scheduler will only allow scheduling pods that have tolerations for the tainted nodes.
-    
-    2. PreferNoSchedule: Kubernetes scheduler will try to avoid scheduling pods that don’t have tolerations for the tainted nodes.
-    
-    3. NoExecute: Kubernetes will evict the running pods from the nodes if the pods don’t have tolerations for the tainted nodes.
+1. NoSchedule: Kubernetes scheduler will only allow scheduling pods that have tolerations for the tainted nodes.
 
-    Tainted a node:
+2. PreferNoSchedule: Kubernetes scheduler will try to avoid scheduling pods that don’t have tolerations for the tainted nodes.
+
+3. NoExecute: Kubernetes will evict the running pods from the nodes if the pods don’t have tolerations for the tainted nodes.
+
+Tainted a node:
     kubectl taint node k3d-mykeptn-server-0 app=fluentd-logging:NoExecute
     kubectl apply -f daemonset.yaml
 
-    Untainted of a Node:
+Untainted of a Node:
     kubectl taint node k3d-mykeptn-server-0 app=fluentd-logging:NoExecute-
 
     kubectl label node k3d-mykeptn-server-0 type=platform-tools
