@@ -16,15 +16,14 @@ There are 3 effects:
 
 3. NoExecute: Kubernetes will evict the running pods from the nodes if the pods don’t have tolerations for the tainted nodes.
 
-Tainted a node:
+Tainted a node:  
+
     kubectl taint node k3d-mykeptn-server-0 app=fluentd-logging:NoExecute
     kubectl apply -f daemonset.yaml
 
-Untainted of a Node:
-    kubectl taint node k3d-mykeptn-server-0 app=fluentd-logging:NoExecute-
+Untainted of a Node:  
 
-    kubectl label node k3d-mykeptn-server-0 type=platform-tools
-    kubectl apply -f daemonset2.yaml
+    kubectl taint node k3d-mykeptn-server-0 app=fluentd-logging:NoExecute-
 
 # 3. Nodeselector For Daemonset Pods  
 
