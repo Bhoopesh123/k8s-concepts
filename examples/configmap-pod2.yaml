@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-app
+spec:
+  containers:
+    - name: my-app
+      image: my-app:latest
+      env:
+        - name: ENVIRONMENT
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: environment
+        - name: LOG_MODE
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: logging
+        - name: LOG_PATH
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: logs_path
+        - name: THREDS_CLOUNT
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: parllel_jobs

@@ -1,0 +1,11 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: app-config
+data:
+  app.properties: |
+    environment=production
+    logging=INFO
+    logs_path=$APP_HOME/logs/
+    parllel_jobs=3
+    wait_time=30sec
