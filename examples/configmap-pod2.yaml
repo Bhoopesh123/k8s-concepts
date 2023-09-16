@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
     - name: my-app
-      image: my-app:latest
+      image: aadoptante/my-app:latest
       env:
         - name: ENVIRONMENT
           valueFrom:

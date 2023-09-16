@@ -1,27 +1,17 @@
---- 
 apiVersion: v1
 kind: Pod
-metadata: 
-  name: nginx-web
-spec: 
-  containers: 
-    - 
-      image: "nginx:1.7.9"
-      name: nginx
-      ports: 
-        - 
-          containerPort: 443
-          name: nginx-https
-        - 
-          containerPort: 80
-          name: nginx-http
-      volumeMounts: 
-        - 
-          mountPath: /etc/nginx/nginx.conf
-          name: nginx-config
-          subPath: nginx.conf
-  volumes: 
-    - 
-      configMap: 
-        name: nginx-config
-      name: nginx-config
+metadata:
+  name: dapi-test-pod
+spec:
+  containers:
+    - name: test-container
+      image: gcr.io/google_containers/busybox
+      command: [ "/bin/sh", "-c", "cat /etc/config/special.how" ]
+      volumeMounts:
+      - name: config-volume
+        mountPath: /etc/config
+  volumes:
+    - name: config-volume
+      configMap:
+        name: special-config
+  restartPolicy: Never
