@@ -1,6 +1,8 @@
 
 # 1. Create Opaque secrets using file
 
+Arbitrary user-defined data Secret and it is the default secret in Kubernetes.
+
     echo -n 'user' > f1.txt
     echo -n 'test123' > f2.txt
 
@@ -17,14 +19,14 @@
 
 # 3. Create Service Account Token Secret
 
-    A kubernetes.io/service-account-token type of Secret is used to store a token credential that identifies a ServiceAccount. This is a legacy mechanism that provides long-lived ServiceAccount credentials to Pods.
+A kubernetes.io/service-account-token type of Secret is used to store a token credential that identifies a ServiceAccount. This is a legacy mechanism that provides long-lived ServiceAccount credentials to Pods.
 
     cd examples
     kubectl apply -f secret2.yaml
 
 # 4. Docker config Secrets:
 
-    Stores the credentials for accessing a Docker registry for images.
+Stores the credentials for accessing a Docker registry for images.
 
     docker login
     cat ~/.docker/config.json
