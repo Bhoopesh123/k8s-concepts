@@ -17,7 +17,7 @@ Arbitrary user-defined data Secret and it is the default secret in Kubernetes.
     cd examples
     kubectl apply -f secret.yaml
     kubectl apply -f pod-secret.yaml
-    kubectl exec -it pod-secret -- /bin/bash
+    kubectl exec -it secret-env-pod -- /bin/bash
 
 # 3. Create Service Account Token Secret
 
