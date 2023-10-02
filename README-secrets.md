@@ -1,3 +1,5 @@
+ConfigMaps are “unchanged” if the data hasn’t changed.
+Secrets are always “configured” — even if the file hasn’t changed
 
 # 1. Create Opaque secrets using file
 
