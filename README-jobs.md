@@ -12,7 +12,7 @@ Deleting a Job will clean up the Pods it created. Suspending a Job will delete i
     kubectl apply -f job1.yaml
     kubectl logs jobs/pi
 
-    kubectl apply -f job1.yaml
+    kubectl apply -f job2.yaml
     kubectl logs jobs/countdown
 
 # 2. Kubernetes CronJob Example  
