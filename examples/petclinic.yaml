@@ -25,7 +25,6 @@ metadata:
   name: petclinic
   labels:
     app: petclinic
-  namespace: otel
 spec:
   type: ClusterIP
   selector:
